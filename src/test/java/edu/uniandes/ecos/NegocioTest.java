@@ -1,5 +1,7 @@
 package edu.uniandes.ecos;
 
+import edu.uniandes.ecos.psp0.Negocio;
+import edu.uniandes.ecos.psp0.Fuente;
 import java.util.List;
 import junit.framework.TestCase;
 

@@ -1,4 +1,4 @@
-package edu.uniandes.ecos;
+package edu.uniandes.ecos.psp0;
 
 import java.util.List;
 
