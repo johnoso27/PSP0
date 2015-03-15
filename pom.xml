@@ -25,4 +25,10 @@
  </plugin>
  	</plugins>
  </reporting>
+  <description>Programa que calcula la media y la desviación estandar de un conjunto de números de tipo Double.</description>
+    <properties>
+        <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>iso-8859-1</project.reporting.outputEncoding>
+        <project.test.sourceEncoding>iso-8859-1</project.test.sourceEncoding>
+    </properties> 
 </project>

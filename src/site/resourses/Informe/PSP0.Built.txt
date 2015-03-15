@@ -1,0 +1,94 @@
+D:\Dropbox\UniversidadAndes\ProyectosMaven\psp0>mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building psp0 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ psp0 ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ psp0 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ps
+p0 ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\Dropbox\UniversidadAndes\Proyectos
+Maven\psp0\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ psp0 --
+-
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ psp0 ---
+[INFO] Surefire report directory: D:\Dropbox\UniversidadAndes\ProyectosMaven\psp
+0\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.uniandes.ecos.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+Running edu.uniandes.ecos.NegocioTest
+Test del mÚtodo 'calcularDesviacionEstandar'
+Primera prueba del cßlculo de la desviaci¾n estandar:
+Iniciando cßlculo de la media
+Datos: [186.0, 699.0, 132.0, 272.0, 291.0, 331.0, 199.0, 1890.0, 788.0, 1601.0]
+Media: 638.9
+
+Iniciando cßlculo de la desviaci¾n estandar
+Media: [186.0, 699.0, 132.0, 272.0, 291.0, 331.0, 199.0, 1890.0, 788.0, 1601.0]
+Desviaci¾n estandar: 625.6339806770231
+
+Segunada prueba del cßlculo de la desviaci¾n estandar:
+Iniciando cßlculo de la media
+Datos: [160.0, 591.0, 114.0, 229.0, 230.0, 270.0, 128.0, 1657.0, 624.0, 1503.0]
+Media: 550.6
+
+Iniciando cßlculo de la desviaci¾n estandar
+Media: [160.0, 591.0, 114.0, 229.0, 230.0, 270.0, 128.0, 1657.0, 624.0, 1503.0]
+Desviaci¾n estandar: 572.026844746915
+
+Tercera prueba del cßlculo de la desviaci¾n estandar:
+Iniciando cßlculo de la media
+Datos: [15.0, 69.9, 6.5, 22.4, 28.4, 65.9, 19.4, 198.7, 38.8, 138.2]
+Media: 60.32000000000001
+
+Iniciando cßlculo de la desviaci¾n estandar
+Media: [15.0, 69.9, 6.5, 22.4, 28.4, 65.9, 19.4, 198.7, 38.8, 138.2]
+Desviaci¾n estandar: 62.25583060601187
+
+Test del mÚtodo 'calcularMedia'
+Primera prueba del cßlculo de la media:
+Iniciando cßlculo de la media
+Datos: [186.0, 699.0, 132.0, 272.0, 291.0, 331.0, 199.0, 1890.0, 788.0, 1601.0]
+Media: 638.9
+
+Seguanda prueba del cßlculo de la media:
+Iniciando cßlculo de la media
+Datos: [160.0, 591.0, 114.0, 229.0, 230.0, 270.0, 128.0, 1657.0, 624.0, 1503.0]
+Media: 550.6
+
+Tercera prueba del cßlculo de la media:
+Iniciando cßlculo de la media
+Datos: [15.0, 69.9, 6.5, 22.4, 28.4, 65.9, 19.4, 198.7, 38.8, 138.2]
+Media: 60.32000000000001
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ psp0 ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.066 s
+[INFO] Finished at: 2015-03-15T09:17:34-05:00
+[INFO] Final Memory: 12M/107M
+[INFO] ------------------------------------------------------------------------
+D:\Dropbox\UniversidadAndes\ProyectosMaven\psp0>mvn site

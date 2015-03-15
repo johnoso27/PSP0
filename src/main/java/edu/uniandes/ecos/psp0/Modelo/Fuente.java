@@ -1,6 +1,5 @@
-package edu.uniandes.ecos.psp0;
+package edu.uniandes.ecos.psp0.Modelo;
 
-import edu.uniandes.ecos.psp0.Modelo.PuntoDosDimensiones;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -16,8 +15,9 @@ import java.util.List;
  */
 public class Fuente {
 
-    /*
-     *Este método retorna una lista de números    
+    /**
+     * Este método retorna una lista de 10 números.
+     * @return colección de números de tipo Double.
      */
     public List<Double> obtenerFuenteDatos() {
         List<Double> lista = new ArrayList<Double>();
@@ -31,11 +31,14 @@ public class Fuente {
         lista.add(1890.0);
         lista.add(788.0);
         lista.add(1601.0);
+
         return lista;
     }
 
-    /*
-     *Este método retorna una lista de números    
+    /**
+     * Este método retorna una lista de 10 números.
+     *
+     * @return colección de números de tipo Double.
      */
     public List<Double> obtenerFuenteDatosA() {
         List<Double> lista = new ArrayList<Double>();
@@ -49,11 +52,14 @@ public class Fuente {
         lista.add(1657.0);
         lista.add(624.0);
         lista.add(1503.0);
+
         return lista;
     }
 
-    /*
-     *Este método retorna una lista de números    
+    /**
+     * Este método retorna una lista de 10 números.
+     *
+     * @return colección de números de tipo Double.
      */
     public List<Double> obtenerFuenteDatosB() {
         List<Double> lista = new ArrayList<Double>();
@@ -67,8 +73,9 @@ public class Fuente {
         lista.add(198.7);
         lista.add(38.8);
         lista.add(138.2);
+
         return lista;
-    }   
+    }
 
     /**
      * Método que lee un archivo
@@ -79,18 +86,56 @@ public class Fuente {
     public File LeerArchivo(String rutaArchivo) {
         File archivoLeido = null;
         if (rutaArchivo == null || rutaArchivo.isEmpty()) {
-            System.out.println("No se ha especificado la ruta del archivo!");
+            System.out.println("No se ha especificado la ruta del archivo.");
         }
 
         archivoLeido = new File(rutaArchivo);
         if (!archivoLeido.exists()) {
-            System.out.println("El archivo " + rutaArchivo + " no existe");
+            System.out.println("El archivo " + rutaArchivo + " no existe.");
         }
 
         return archivoLeido;
     }
-    
-     /**
+
+    /**
+     * Método que obtiene un listado de números dobles de un archivo de texto.
+     * El archivo debe contener cada número en una linea.
+     *
+     * @param rutaArchivo para idicarle el archivo.
+     * @return colección de números leidos.
+     */
+    public List<Double> obtenerListaNumerosDesdeArchivo(String rutaArchivo) {
+        List<Double> lista = new ArrayList<Double>();
+        File file = this.LeerArchivo(rutaArchivo);
+        if (file == null || !file.exists()) {
+            System.out.println("No se puede leer o el archivo no existe!");
+            return lista;
+        }
+
+        try {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader buffer = new BufferedReader(fileReader);
+            String nextLine = null;
+            while ((nextLine = buffer.readLine()) != null) {
+                try {
+                    if (!nextLine.trim().isEmpty()) {
+                        lista.add(Double.parseDouble(nextLine));
+                        System.out.println("Se adicionó el punto: " + nextLine);
+                    }
+                } catch (Exception ex) {
+                    System.out.println("Punto inválido: " + nextLine + ". Error: " + ex.getMessage());
+                }
+            }
+            buffer.close();
+            fileReader.close();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return lista;
+    }
+
+    /**
      * Método que obtiene un listado de puntos de un archivo de texto
      *
      * @param rutaArchivo donde se encuentran los puntos. Los valores del punto
@@ -98,10 +143,11 @@ public class Fuente {
      * @return colección de puntos leidos.
      */
     public LinkedList<PuntoDosDimensiones> obtenerPuntosDosDimensionesDeArchivo(String rutaArchivo) {
-       LinkedList<PuntoDosDimensiones> lista = new LinkedList<PuntoDosDimensiones>();
+        LinkedList<PuntoDosDimensiones> lista = new LinkedList<PuntoDosDimensiones>();
         File file = this.LeerArchivo(rutaArchivo);
         if (file == null || !file.exists()) {
-            System.out.println("No se puede leer. El archivo no existe!");
+            System.out.println("No se puede leer o el archivo no existe!");
+            return lista;
         }
 
         try {
@@ -124,10 +170,10 @@ public class Fuente {
             }
             buffer.close();
             fileReader.close();
-        } catch (IOException e) {
-            System.out.println("Error al intentar leer el archivo!");
-            //e.printStackTrace();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
+
         return lista;
     }
 }

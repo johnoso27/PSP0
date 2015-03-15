@@ -27,10 +27,14 @@ public class PuntoDosDimensiones {
      Obtiene o establece el valor vertical del punto.
      */
     public Double y;
-    
+
+    /**
+     * Se sobreescribe el método toString
+     *
+     * @return los valores de X y Y como una cadena.
+     */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "X:" + this.x + " Y:" + this.y;
     }
 }

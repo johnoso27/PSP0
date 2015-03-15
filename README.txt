@@ -9,6 +9,11 @@ Fork del Proyecto:
 Para obtener este proyecto desde el repositorio GutHub, clone el proyecto con la siguiente URL:
 https://github.com/johnoso27/psp0.git
 
+Después de clonarlo:
+Puede encontrar el informe que se encuentra en la ruta \src\site\resourses\ de este proyecto.
+La documentación de proyecto está en la ruta \src\site\DocumentacionJavaDoc: ejecutar 
+los archivos \src\site\DocumentacionJavaDoc\index.html y \src\site\DocumentacionJavaDoc\apidocs\index.html
+
 08/02/2015
 
 Se agregan nuevas funcionalidades:
