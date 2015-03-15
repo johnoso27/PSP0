@@ -15,7 +15,6 @@ La documentación de proyecto está en la ruta \src\site\DocumentacionJavaDoc: eje
 los archivos \src\site\DocumentacionJavaDoc\index.html y \src\site\DocumentacionJavaDoc\apidocs\index.html
 
 08/02/2015
-
 Se agregan nuevas funcionalidades:
 - Se agrega la clase PuntosDosDimensiones
 - Se agrega método obtenerPuntosDosDimensionesDeArchivo que retorna una lista de objetos
@@ -23,6 +22,11 @@ Se agregan nuevas funcionalidades:
 - Se agrega método LeerArchivo, el cual permite leer un archivo a partir de la ruta del mismo.
 - Se modificaron los nombres de los paquetes para resolver confusión con otros paquetes de otros proyectos
   de similar estructura.
+
+15/03/2015
+- Se organiza el código fuente de tal manera que al agregarle las vistas se pueda implementar el patrón MVC.
+- Se cambia la ubicación del informe con el fin de cumplir el requerimiento del tutor.
+
 
 
 John Dany Osorio Ramos
